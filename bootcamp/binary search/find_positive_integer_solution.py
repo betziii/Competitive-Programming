@@ -12,10 +12,10 @@
 class Solution:
     def findSolution(self, customfunction: 'CustomFunction', z: int) -> List[List[int]]:
         result = []
-        for i in range(1, 1001):
+        for i in range(1, z+1):
             ans = -1
             l = 1
-            r = 1000
+            r = z
             while l <= r:
                 mid = l + (r-l)//2
                 # print(mid)
