@@ -1,3 +1,6 @@
+from ast import List
+
+
 class Solution:
     def dfs(self,grid, row, col, flag):
         self.visited.add((row, col))
@@ -22,7 +25,7 @@ class Solution:
             if grid[i][0] == 1 and (i,0) not in self.visited:
                 self.dfs(grid, i, 0, False)
         for j in range(n):
-            if grid[0][j] == 1 and (0,j) not in self.visited:
+            if grid[0][j] == 1 and (0,j) not in b.visited:
                 self.dfs(grid, 0, j, False)
         for k in range(m):
             if grid[k][n-1] == 1 and (k,n-1) not in self.visited:
