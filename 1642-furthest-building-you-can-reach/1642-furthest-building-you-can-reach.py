@@ -14,3 +14,4 @@ class Solution:
                 else:
                     return i
         return len(heights) - 1
+    
