@@ -1,12 +1,18 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)-1):
-            for j in range(i+1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
+        # hashmap = value:index
+        # if target - nums[i] exists in hashmap
+        # if it doesn't exist we add the nums[i] to the hashmap
+        previous = {}
+        
+        for i in range(len(nums)):
+            a = target - nums[i]
+            if a in previous:
+                return [previous[a], i]
+            previous[nums[i]] = i
+        
+        
                 
-#             2,3,7,11,15
-#             2
                 
         
         
