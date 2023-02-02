@@ -1,0 +1,13 @@
+import heapq
+class Solution:
+    def minimumOperations(self, nums: List[int]) -> int:
+        count = 0
+        n = [i for i in nums if i > 0]
+        heapq.heapify(n)
+        while sum(n) > 0:
+            x = n[0]
+            count += 1
+            n = [j - x for j in n if j - x > 0]
+            heapq.heapify(n)
+        return count
+        
